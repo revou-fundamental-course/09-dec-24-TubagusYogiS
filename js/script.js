@@ -44,3 +44,21 @@ function showBanner(n) {
 
 // Automate banned slide
 setInterval(nextSlide, 3000);
+
+
+media only screen and (max-width: 480pcx) {
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+}
+    .main-container {
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+    form{
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}

@@ -32,9 +32,21 @@ nav>a {
 
 .banner-img {
     height: 320px;
-    background-image: url(https://picsum.photos/750);
+  
     background-size: cover;
     background-position: center;
+}
+
+.banner-1 {
+    background-image: url(https://picsum.photos/710);
+}
+
+.banner-2 {
+    background-image: url(https://picsum.photos/720);
+}
+
+.banner-3 {
+    background-image: url(https://picsum.photos/730);
 }
 
 .content-header {
@@ -52,9 +64,22 @@ nav>a {
 
 form {
     background-color: aliceblue;
+    align-content: center;
+    text-align: center;
 }
 
 .our-packages-header {
+    background-color: aliceblue;
+    margin-top: 24px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.content {
+    height: 500px;
+}
+
+.call-us-header {
     background-color: aliceblue;
     margin-top: 24px;
     padding-top: 64px;

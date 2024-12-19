@@ -1,35 +1,46 @@
 // Ini Javascript
-// untuk cek sudah terkoneksi atau belum -> console.log("Hello World!");
-console.log("Javascript berhasil tersambung");
+console.log('Javascript berhasil tersambung');
 
-showBanner();
+let indexSlide = 0;
 
-//Fungsi untuk memvalidasi dari Javascript
+nextSlide();
+
+// Fungsi untuk memvalidasi
 function validateForm() {
-    console.log("Validate form executed");
-    const usernameInput = document.getElementById("username-input").value;
+    const usernameInput = document.getElementById('username-input').value;
     console.log(usernameInput);
 
-//Fungsi untuk validasi nama user jika tidak kosong    
-    if (usernameInput == "") {
-        alert("Inputan tidak boleh kosong");
+    // Validasi jika nama user tidak kosong
+    if (usernameInput == '') {
+        alert('Inputan tidak boleh kosong');
     } else {
-        document.getElementById("username-result").innerHTML = usernameInput;
+        document.getElementById('username-result').innerHTML = usernameInput;
     }
 
-    console.log("validateForm executed");
-    }
-
-function showBanner() {
-    const imageList = document.getElementsByClassName("banner-img")
-    console.log (imageList);
-
-    //Hide semua banner
-        for (let i = 0; i < imageList.length; i++) {
-        imageList.style.display = "none";
-        }
-
-    //Show 1 banner sesuai posisi yang diinginkan
-    imageList(i).style.display = "block";
+    console.log('validateForm executed');
 }
-//document.getElementById("submit-btn").addEventListener;
+
+function nextSlide() {
+    showBanner(indexSlide += 1);
+}
+
+function showBanner(n) {
+    const imageList = document.getElementsByClassName('banner-img');
+
+    console.log(imageList);
+    console.log(imageList.length);
+    console.log(n);
+    if (n > imageList.length - 1) indexSlide = 0;
+
+
+    // Hide semua banner
+    for (let i = 0; i < imageList.length; i++) {
+        imageList[i].style.display = "none";
+    }
+
+    // Show 1 Banner sesuai Posisi yang diinginkan
+    imageList[indexSlide].style.display = "block";
+}
+
+// Automate banned slide
+setInterval(nextSlide, 3000);
